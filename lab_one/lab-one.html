@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="../style.css" id="link">
     <script src="../script.js"></script>
     <style>
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('fonts/Minecraft.ttf')
+        }
+        @font-face {
+            font-family: 'Retro';
+            src: url('fonts/Retro.ttf')
+        }
         body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("https://free4kwallpapers.com/uploads/originals/2019/06/05/neon-retro-computers-by-lorenzo-herrera-wallpaper.jpg");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://free4kwallpapers.com/uploads/originals/2019/06/05/neon-retro-computers-by-lorenzo-herrera-wallpaper.jpg");
             background-color: #161617;
             background-repeat: repeat;
             background-attachment: fixed;
@@ -20,8 +28,99 @@
         }
         nav.topnav a.active{
             color: #ff8ad8;
-            border: 1px solid #ff8ad8;
         }
+        p{
+            color: white;
+        }
+        p.title-1{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 40px;
+            margin: 80px 0 10px;
+            color: #ff8ad8;
+            font-family: 'Retro' ,serif;
+            font-weight: bold;
+        }
+        p.title-2{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 24px;
+            margin: 0 0 10px;
+            font-family: 'Retro' ,serif;
+        }
+        p.title-3{
+            font-family: "Snell Roundhand",serif;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 18px;
+            margin: 0;
+        }
+        p.subtitle{
+            margin: 20px 0 5px 0;
+            color: #ff8ad8;
+            font-family: 'Retro', sans-serif;
+        }
+        p.subtitle-src{
+            margin: 20px 0 10px 0;
+            color: #ff8ad8;
+            font-family: 'Retro', sans-serif;
+        }
+        p.assignment{
+            font-size: 24px;
+            margin: 0;
+            color: #ff8ad8;
+            font-family: 'Retro', sans-serif;
+        }
+        p.assignment-description{
+            margin-top: 0;
+            font-style: italic;
+        }
+        p.hardware{
+            margin: 0;
+            font-style: italic;
+        }
+        img{
+            width: 50%;
+            border-radius: 12px;
+        }
+        div.main{
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 20px 60px 100px 60px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        iframe{
+            border-radius: 12px;
+            border: 1px solid transparent;
+        }
+        a.link{
+            color: azure;
+            background-color: #ff8ad8;
+            border: 1px solid #ff8ad8;
+            border-radius: 10px;
+            margin-right: 10px;
+            padding: 2px;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Retro', sans-serif;
+        }
+        a.link:hover{
+            background-color: azure;
+            border: 1px solid azure;
+            color: #ff8ad8;
+        }
+        p.footer{
+            display: flex;
+            justify-content: right;
+            font-family: 'Retro', sans-serif;
+            font-size: 16px;
+        }
+
     </style>
 </head>
 <body>
@@ -36,6 +135,64 @@
             <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
         </nav>
     </div>
+
+
+    <!--This is where we put all the lab contents-->
+    <div class="main">
+        <p class="title-1">Lab Assignment One</p>
+        <p class="title-2">LEDs and Push Buttons</p>
+        <p class="title-3">Linyun Liu</p>
+        <br><br>
+        <hr>
+        <br>
+
+        <p class="assignment">Assignment Project 1 (10 marks)</p>
+        <p class="assignment-description">Design and construct a circuit that includes three LEDs (red, green, and blue).
+            When your program runs, each LED turns on and off (blinks) sequentially and continually (red -> green -> blue -> red -> green -> blue -> ...).
+            Capture your settings and working circuit in photos and videos.
+        </p>
+        <p class="subtitle">LIST OF HARDWARE:</p>
+        <p class="hardware">LEDx3, 220&Omega;x1, ESP32, Jumpers</p>
+        <p class="subtitle">CIRCUIT DIAGRAM:</p>
+        <img src="P1_S.png" alt="">
+        <p class="subtitle">BREADBOARD VIEW(S):</p>
+        <img src="P1_BB.png" alt="">
+        <p class="subtitle">PHOTO(S) OF YOUR SETTING ON THE BREADBOARD:</p>
+        <img src="P1_PHOTO.png" alt="">
+        <P class="subtitle">VIDEO:</P>
+        <iframe src="https://drive.google.com/file/d/1XM-mrlVyNAJK5JqzLooPU0lHiQEIcVRg/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
+        <p class="subtitle-src">SOURCE CODE:</p>
+        <a class=link href="https://drive.google.com/file/d/1KC1AVECKYpgMtsREb2ncFV8IU8lJ3QCY/preview">View</a>
+        <a class="link" href="https://drive.google.com/uc?export=download&id=1KC1AVECKYpgMtsREb2ncFV8IU8lJ3QCY">Download</a>
+
+
+        <br><br><br><br><br><br>
+
+        <p class="assignment">Assignment Project 2 (10 marks)</p>
+        <p class="assignment-description">Design and construct a circuit that includes two push buttons and an LED.
+            When one button is pushed, the LED is on while the other button is pushed,
+            the LED is off. When the same button is pushed multiple times, it should not change the status of the LED.
+            Capture your settings and working circuit in photos and videos.
+        </p>
+        <p class="subtitle">LIST OF HARDWARE:</p>
+        <p class="hardware">LEDx1, 220&Omega;x1, 10k&Omega;x4, ESP32, Jumpers, Buttons x2</p>
+        <p class="subtitle">CIRCUIT DIAGRAM:</p>
+        <img src="P2_S.png" alt="">
+        <p class="subtitle">BREADBOARD VIEW(S):</p>
+        <img src="P2_BB.png" alt="">
+        <p class="subtitle">PHOTO(S) OF YOUR SETTING ON THE BREADBOARD:</p>
+        <img src="P2_PHOTO.png" alt="">
+        <P class="subtitle">VIDEO:</P>
+        <iframe src="https://drive.google.com/file/d/1lYuxX6AFtYLUY07B3ZK9N77F9qT1KllR/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
+        <p class="subtitle-src">SOURCE CODE:</p>
+        <a class=link href="https://drive.google.com/file/d/1fFI5c6On-4YIuOMEbo45hdc01__ZVSzH/preview">View</a>
+        <a class="link" href="https://drive.google.com/uc?export=download&id=1fFI5c6On-4YIuOMEbo45hdc01__ZVSzH">Download</a>
+        <br><br>
+        <hr>
+        <p class="footer">20th September 2023</p>
+    </div>
+
+
 </div>
 </body>
 </html>

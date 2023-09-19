@@ -1,10 +1,18 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('fonts/Minecraft.ttf')
+}
+@font-face {
+    font-family: 'Retro';
+    src: url('fonts/Retro.ttf')
+}
 body{
-    font-family: Avenir, serif;
+    font-family: 'Avenir', sans-serif;
     font-size: 20px;
-    font-weight: bold;
 }
 /* Add your regular styles for the top navigation bar */
 nav.topnav {
+    font-family: 'Minecraft', serif;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
