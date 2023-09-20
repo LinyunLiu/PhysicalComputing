@@ -16,7 +16,7 @@
             src: url('fonts/Retro.ttf')
         }
         body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://free4kwallpapers.com/uploads/originals/2019/06/05/neon-retro-computers-by-lorenzo-herrera-wallpaper.jpg");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://wallpapers.com/images/featured/retro-4k-8v883ewds4vq51xp.jpg");
             background-color: #161617;
             background-repeat: repeat;
             background-attachment: fixed;
@@ -86,19 +86,27 @@
         img{
             width: 60%;
             min-width: 350px;
-            border-radius: 12px;
+            border-radius: 16px;
             border: 2px solid #76d6ff;
+            filter: grayscale(100%);
+            transition: all .5s ease-in-out;
+            opacity: 80%;
+        }
+        img:hover{
+            filter: grayscale(0);
+            transform: scale(1.01);
+            opacity: 100%;
         }
         div.main{
             box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
             background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(8px);
-            padding: 20px 60px 100px 60px;
-            margin-top: 20px;
+            padding: 20px 100px 100px 100px;
+            margin-top: 8px;
             border-radius: 8px;
         }
         iframe{
-            border-radius: 12px;
+            border-radius: 16px;
             width: 60%;
             min-width: 350px;
             border: 2px solid #76d6ff;
@@ -130,6 +138,7 @@
 </head>
 <body>
 <div class="page">
+
     <div class="topnav">
         <nav class="topnav" id="topnav">
             <a href="../index.html">Home</a>
@@ -141,7 +150,6 @@
         </nav>
     </div>
 
-
     <!--This is where we put all the lab contents-->
     <div class="main">
         <p class="title-1">Lab Assignment One</p>
@@ -150,6 +158,11 @@
         <br><br>
         <hr>
         <br>
+        <p class="assignment">Project 1.1: Blink</p>
+        <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
+        <iframe src="https://drive.google.com/file/d/1RSWpd3KOzCXCCjdSNd3RG7CpOSk0dFxx/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
+
+        <br><br><br><br><br><br>
 
         <p class="assignment">Assignment Project 1 (10 marks)</p>
         <p class="assignment-description">Design and construct a circuit that includes three LEDs (red, green, and blue).
