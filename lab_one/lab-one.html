@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Home</title>
+    <title>Lab One</title>
     <link rel="stylesheet" href="../style.css" id="link">
     <script src="../script.js"></script>
     <style>
@@ -110,6 +110,14 @@
             width: 60%;
             min-width: 350px;
             border: 2px solid #76d6ff;
+            filter: grayscale(100%);
+            transition: all .5s ease-in-out;
+            opacity: 80%;
+        }
+        iframe:hover{
+            filter: grayscale(0);
+            transform: scale(1.01);
+            opacity: 100%;
         }
         a.link{
             color: azure;
@@ -143,7 +151,7 @@
         <nav class="topnav" id="topnav">
             <a href="../index.html">Home</a>
             <a class=active href="lab-one.html">Lab I</a>
-            <a href="">Lab II</a>
+            <a href="../lab_two/lab-two.html">Lab II</a>
             <a href="">Lab III</a>
             <a href="">Lab IV</a>
             <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>

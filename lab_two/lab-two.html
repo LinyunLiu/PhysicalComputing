@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lab Two</title>
+    <link rel="stylesheet" href="../style.css" id="link">
+    <script src="../script.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('fonts/Minecraft.ttf')
+        }
+        @font-face {
+            font-family: 'Retro';
+            src: url('fonts/Retro.ttf')
+        }
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://www.hdwallpapers.in/download/colors_yellow_orange_hd_abstract-1280x720.jpg");
+            background-color: #161617;
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        nav.topnav a:hover {
+            color: #fdca5d;
+        }
+        nav.topnav a.active{
+            color: #fdca5d;
+        }
+        p{
+            color: white;
+        }
+        p.title-1{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 40px;
+            margin: 80px 0 10px;
+            color: #fdca5d;
+            font-family: 'Retro' ,serif;
+            font-weight: bold;
+        }
+        p.title-2{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 24px;
+            margin: 0 0 10px;
+            font-family: 'Retro' ,serif;
+            color: #ff9300
+        }
+        p.title-3{
+            font-family: "Snell Roundhand",serif;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 20px;
+            margin: 0;
+        }
+        p.subtitle{
+            margin: 20px 0 5px 0;
+            color: #ff8ad8;
+            font-family: 'Retro', sans-serif;
+        }
+        p.subtitle-src{
+            margin: 20px 0 10px 0;
+            color: #ff8ad8;
+            font-family: 'Retro', sans-serif;
+        }
+        p.assignment{
+            font-size: 24px;
+            margin: 0;
+            color: #ff7e79;
+            font-family: 'Retro', sans-serif;
+        }
+        p.assignment-description{
+            margin-top: 0;
+            font-style: italic;
+        }
+        p.hardware{
+            margin: 0;
+            font-style: italic;
+        }
+        img{
+            width: 60%;
+            min-width: 350px;
+            border-radius: 16px;
+            border: 2px solid #ff8ad8;
+            filter: grayscale(100%);
+            transition: all .5s ease-in-out;
+            opacity: 80%;
+        }
+        img:hover{
+            filter: grayscale(0);
+            transform: scale(1.01);
+            opacity: 100%;
+        }
+        div.main{
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 20px 100px 100px 100px;
+            margin-top: 8px;
+            border-radius: 8px;
+        }
+        iframe{
+            border-radius: 16px;
+            width: 60%;
+            min-width: 350px;
+            border: 2px solid #ff8ad8;
+            filter: grayscale(100%);
+            transition: all .5s ease-in-out;
+            opacity: 80%;
+        }
+        iframe:hover{
+            filter: grayscale(0);
+            transform: scale(1.01);
+            opacity: 100%;
+        }
+        a.link{
+            color: white;
+            background-color: #ff8ad8;
+            border: 1px solid #ff8ad8;
+            border-radius: 5px;
+            margin-right: 10px;
+            padding: 2px;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Retro', sans-serif;
+        }
+        a.link:hover{
+            background-color: white;
+            border: 1px solid white;
+            color: #ff8ad8;
+        }
+        p.footer{
+            display: flex;
+            justify-content: right;
+            font-family: 'Retro', sans-serif;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="topnav">
+        <nav class="topnav" id="topnav">
+            <a href="../index.html">Home</a>
+            <a href="../lab_one/lab-one.html">Lab I</a>
+            <a class=active href="lab-two.html">Lab II</a>
+            <a href="">Lab III</a>
+            <a href="">Lab IV</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+        </nav>
+    </div>
+
+    <!--This is where we put all the lab contents-->
+    <div class="main">
+        <p class="title-1">Lab Assignment Two</p>
+        <p class="title-2">LEDs and Push Buttons II</p>
+        <p class="title-3">Linyun Liu</p>
+        <br><br>
+        <hr>
+        <br>
+        <p class="assignment">Assignment Project 1 (10 marks)</p>
+        <p class="assignment-description">Design and construct a circuit that includes an LED bar
+            graph and two push buttons (of course, you also need resistors).
+            When one push button is pressed, the LED light is gradually lighting
+            up and out from left to right (1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 1 -> 2 ......)
+            whereas when the other button is pressed, the LED light is gradually lighting up and
+            out from right to left similar to the tutorial project 4-2 (you need to use PWM).
+            Capture your settings and working circuit in photos and videos.
+        </p>
+        <p class="subtitle">&#8226;&nbsp;LIST OF HARDWARE:</p>
+        <p class="hardware">LED Bar x1, 220&Omega; x8, 10k&Omega; x1, ESP32, Jumpers, button x2</p>
+        <p class="subtitle">&#8226;&nbsp;CIRCUIT DIAGRAM:</p>
+        <img src="P1_S.png" alt="">
+        <p class="subtitle">&#8226;&nbsp;BREADBOARD VIEW(S):</p>
+        <img src="P1_BB.png" alt="">
+        <p class="subtitle">&#8226;&nbsp;PHOTO(S) OF YOUR SETTING ON THE BREADBOARD:</p>
+        <img src="P1_PHOTO.jpg" alt="">
+        <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
+        <iframe src="https://drive.google.com/file/d/12aXM6UA0xh796SG5ADjX7FXZMq7hN9XV/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
+        <p class="subtitle-src">&#8226;&nbsp;SOURCE CODE:</p>
+        <a class=link href="https://drive.google.com/file/d/1VF14uDXwlCjKzdJQdn5ja_9--icWt2aI/preview">View</a>
+        <a class="link" href="https://drive.google.com/uc?export=download&id=1VF14uDXwlCjKzdJQdn5ja_9--icWt2aI">Download</a>
+
+
+        <br><br><br><br><br><br>
+
+        <p class="assignment">Assignment Project 2 (10 marks)</p>
+        <p class="assignment-description">Design and construct a circuit that includes a push button, an RGB LED,
+            and NeoPixels (8 RGB LED module) (and registers). When the button is pressed,
+            the RGB LED is lit with a specific colour followed by the NeoPixels lit with the same colour.
+            Each pressing the button changes the colour from red to orange to yellow to green to blue to
+            indigo to violet to red to orange to ... (repeating the rainbow colours).
+            Capture your settings and working circuit in photos and videos.
+        </p>
+        <p class="subtitle">&#8226;&nbsp;LIST OF HARDWARE:</p>
+        <p class="hardware">RGB LED x1, 10k&Omega;x2, ESP32, Jumpers, Buttons x1, Neopixel LED x1</p>
+        <p class="subtitle">&#8226;&nbsp;CIRCUIT DIAGRAM:</p>
+        <img src="P2_S.png" alt="">
+        <p class="subtitle">&#8226;&nbsp;BREADBOARD VIEW(S):</p>
+        <img src="P2_BB.png" alt="">
+        <p class="subtitle">&#8226;&nbsp;PHOTO(S) OF YOUR SETTING ON THE BREADBOARD:</p>
+        <img src="P2_PHOTO.jpg" alt="">
+        <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
+        <iframe src="https://drive.google.com/file/d/1VyOyiQ4f1VTO-BjqOLjc-j4TljiRCkJV/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
+        <p class="subtitle-src">&#8226;&nbsp;SOURCE CODE:</p>
+        <a class=link href="https://drive.google.com/file/d/16Ggv3sAZ5NeyUDUJ-hMNCsOemqa2Goif/preview">View</a>
+        <a class="link" href="https://drive.google.com/uc?export=download&id=16Ggv3sAZ5NeyUDUJ-hMNCsOemqa2Goif">Download</a>
+        <br><br>
+        <hr>
+        <p class="footer">27th September 2023</p>
+    </div>
+
+
+</div>
+</body>
+</html>
