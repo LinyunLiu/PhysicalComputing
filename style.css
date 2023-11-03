@@ -9,26 +9,41 @@
 body{
     font-family: 'Avenir', sans-serif;
     font-size: 20px;
-    background-color: #191919;
+    background-color: black;
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    margin: 15px;
 }
-/* Add your regular styles for the top navigation bar */
-nav.topnav {
+div.page{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+div.topnav{
+    position: relative;
     font-family: 'Minecraft', serif;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px 80px 0 80px;
+    margin-top: 8px;
+}
+div.main{
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
-    overflow: hidden;
+    padding: 20px 100px 100px 100px;
+    margin-top: 8px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
 nav.topnav a {
     float: left;
-    display: block;
+    display: flex;
     color: white;
     text-align: center;
     padding: 10px 10px;
@@ -40,7 +55,6 @@ nav.topnav a {
 nav.topnav .icon {
     display: none;
 }
-
 @media screen and (max-width: 1100px) {
     .topnav a:not(:first-child) {
         display: none;
@@ -140,15 +154,6 @@ img:hover{
     transform: scale(1.01);
     opacity: 100%;
 }
-div.main{
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    padding: 20px 100px 100px 100px;
-    margin-top: 8px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
 iframe{
     border-radius: 2px;
     width: 100%;
@@ -185,5 +190,11 @@ p.footer{
     justify-content: right;
     font-family: 'Retro', sans-serif;
     font-size: 16px;
+}
+
+hr{
+    background-color: rgb(255,255,255,0.5);
+    height: 1px;
+    border: none
 }
 
