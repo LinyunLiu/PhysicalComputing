@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Lab Four</title>
+    <title>Lab Five</title>
     <link rel="stylesheet" href="../style.css" id="link">
     <script src="../script.js"></script>
     <style>
@@ -16,8 +16,6 @@
             src: url('fonts/Retro.ttf')
         }
         body {
-            /*background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),*/
-            /*url("https://www.pixground.com/wp-content/uploads/2023/06/Windows-11-Red-Abstract-Bloom-Background-4K-Wallpaper.jpg");*/
             background-color: #191919;
             background-repeat: repeat;
             background-attachment: fixed;
@@ -155,8 +153,8 @@
             <a href="../lab_one/lab-one.html">Lab I</a>
             <a href="../lab_two/lab-two.html">Lab II</a>
             <a href="../lab_three/lab-three.html">Lab III</a>
-            <a class=active href="lab-four.html">Lab IV</a>
-            <a href="../lab_five/lab-five.html">Lab V</a>
+            <a href="../lab_four/lab-four.html">Lab IV</a>
+            <a class=active href="lab-five.html">Lab V</a>
             <a href="../lab_six/lab-six.html">Lab VI</a>
             <a href="">Lab VII</a>
             <a href="">Lab VIII</a>
@@ -168,55 +166,25 @@
 
     <!--This is where we put all the lab contents-->
     <div class="main">
-        <p class="title-1">Lab Assignment Four</p>
-        <p class="title-2">TouchSensor, Photoresistor, and Thermistor</p>
+        <p class="title-1">Lab Assignment Five</p>
+        <p class="title-2">Joystick, 74HC595 & LED Bar Graph, 7-Segment Display, and LED Matrix</p>
         <p class="title-3">Linyun Liu</p>
         <br><br>
         <hr>
-        <br>
-        <p class="assignment">Project 11.1: Soft Light</p>
-        <p class="subtitle">&#8226;&nbsp;PHOTO:</p>
-        <img src="11.1.jpg" alt="">
-        <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
-        <iframe src="https://drive.google.com/file/d/1BahTm0eVfhmxKqmxxrolIiot-bCGmOTy/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
-        <br><br><br>
-        <p class="assignment">Project 11.2: Soft Colorful Light</p>
-        <p class="subtitle">&#8226;&nbsp;PHOTO:</p>
-        <img src="11.2.jpg" alt="">
-        <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
-        <iframe src="https://drive.google.com/file/d/1LUEN0goOVty6iFJWlbmYBhMnP4hFAKWb/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
-        <br><br><br>
-        <p class="assignment">Project 11.3: Soft Rainbow Light</p>
-        <p class="subtitle">&#8226;&nbsp;PHOTO:</p>
-        <img src="11.3.jpg" alt="">
-        <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
-        <iframe src="https://drive.google.com/file/d/1MdLDC2epc8OQ5w2XhKIV-tT7UWE9ENyx/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
-        <br><br><br>
-        <p class="assignment">Project 12.1: Night Lamp</p>
-        <p class="subtitle">&#8226;&nbsp;PHOTO:</p>
-        <img src="12.1.jpg" alt="">
-        <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
-        <iframe src="https://drive.google.com/file/d/15ZByr-L-7wWVb4GJ2WwkBqF4nK9tP5OY/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
-        <br><br><br>
-        <p class="assignment">Project 13.1: Thermometer</p>
-        <p class="subtitle">&#8226;&nbsp;PHOTO:</p>
-        <img src="13.1.jpg" alt="">
-        <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
-        <iframe src="https://drive.google.com/file/d/1K9gF8IKLsiR9KHg9xrc6UV45QQ2W_J7w/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
-
-        <br><br><br><br><br><br>
-        <hr>
-
         <p class="assignment">Assignment Project 1 (10 marks)</p>
-        <p class="assignment-description">Design and construct a circuit with a buzzer, seven LEDs, jumpers, and other necessary electronic
-            components. Seven jumpers are connected to several GPIO channels as capacitive touch pins. Each
-            jumper represents each musical tone of the seven tones (do, re, mi, fa, sol, la, and si). Each jumper is
-            also connected to a LED. When one of the jumpers is touched, it plays its musical tone, and its
-            corresponding LED is lit. Capture your settings and working circuit in photos and videos (the videos
-            should include sound).
+        <p class="assignment-description">Design and construct a circuit with a joystick, a buzzer, a 4-digit 7-segment display, a 74HC595, and
+        other necessary electronic components. At the beginning, there is no message on the 4-digit 7-segment
+        display. When you press the joystick down vertically (it is like a button), the 4-digit 7-segment display
+        shows a message. When you push the joystick to the right, the 4-digit 7-segment display shows the
+        message moving from the left to the right with some sound effects (s1) continually (going around).
+        When you push the joystick to the left, the same message crosses from the right to left over the display
+        with different sound effects (s2) continually (going around). When you push the joystick down, the
+        message scrolls down with sound effects (s3). When you push the joystick up, the message scrolls up
+        with sound effects (s4). Capture your settings and working circuit in photos and videos (the videos
+        should include sound).
         </p>
         <p class="subtitle">&#8226;&nbsp;LIST OF HARDWARE:</p>
-        <p class="hardware">LED x7, 220&Omega; x7, 1k&Omega; x1, ESP32, Jumpers, Active Buzzer x1, NPN transistor x1</p>
+        <p class="hardware">ESP32 x 1, Joystick x 1, Buzzer x 1, 4-digit 7-segment display, 74HC595, 1kΩ Resistor x 1, 220Ω Resister x 8, NPN Transistor x 1, Jumpers</p>
         <p class="subtitle">&#8226;&nbsp;CIRCUIT DIAGRAM:</p>
         <img src="P1_S.png" alt="">
         <p class="subtitle">&#8226;&nbsp;BREADBOARD VIEW(S):</p>
@@ -224,24 +192,23 @@
         <p class="subtitle">&#8226;&nbsp;PHOTO(S) OF YOUR SETTING ON THE BREADBOARD:</p>
         <img src="P1_PHOTO.jpg" alt="">
         <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
-        <iframe src="https://drive.google.com/file/d/1P37U5wjgmC_Z6Ld7liBBu06FCpzaqGZN/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
+        <iframe src="https://drive.google.com/file/d/12ctvxWscb4omrsfdqNaV6o59dMhuHwad/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
         <p class="subtitle-src">&#8226;&nbsp;SOURCE CODE:</p>
-        <a class=link href="https://drive.google.com/file/d/1q8OZ0V87daEZ9I_MU_F-K8HmHNbxbwu7/preview">View</a>
-        <a class="link" href="https://drive.google.com/uc?export=download&id=1q8OZ0V87daEZ9I_MU_F-K8HmHNbxbwu7">Download</a>
+        <a class=link href="https://drive.google.com/file/d/1WjIcHqhRvpctdjUxGv1knZCc-66Ms053/preview">View</a>
+        <a class="link" href="https://drive.google.com/uc?export=download&id=1WjIcHqhRvpctdjUxGv1knZCc-66Ms053">Download</a>
 
         <br><br><br><br><br><br>
 
         <p class="assignment">Assignment Project 2 (10 marks)</p>
-        <p class="assignment-description">This project is about designing and constructing a circuit to help you wake up in the morning. Use a
-            LED, a NeoPixel module, a buzzer, a photoresistor, a button, and other necessary electronic
-            components. When it is dark, just the LED is lit (probably with dim light because you need to sleep
-            well). When it is bright, the NeoPixel module blinks all the LEDs fast at random, and the buzzer makes
-            loud and crazy sound until the button is pressed (when the button is pressed, all the LEDs stop
-            blinking, and the buzzer stops making any noise.) Capture your settings and working circuit in photos
-            and videos (the videos should include sound).
+        <p class="assignment-description">Design and construct a circuit that displays a short animation with some background music using two
+            buttons, a buzzer, two of 74HC595, an LED matrix, and other necessary electronic components. When
+            you press a button, the LED matrix starts to show an animation with some nice background music,
+            which repeats continually. When you press the other button, both the animation and background music
+            are paused. When the first button is pressed again, it restarts the animation with the music. Capture
+            your settings and working circuit in photos and videos (the videos should include sound).
         </p>
         <p class="subtitle">&#8226;&nbsp;LIST OF HARDWARE:</p>
-        <p class="hardware">LED x2, 220&Omega; x1, 10k&Omega; x3, 1k&Omega; x1, ESP32, Jumpers, button x1, Active Buzzer x1, NPN transistor x1, Photoresistor x1, Neopixel x1</p>
+        <p class="hardware">ESP32 x 1, Buzzer x 1, LED Matrix, Buttons x 2, 74HC595 x 2, 1kΩ Resistor x 1, 220Ω Resister x 8, 10kΩ Resister x 4, NPN Transistor x 1, Jumpers</p>
         <p class="subtitle">&#8226;&nbsp;CIRCUIT DIAGRAM:</p>
         <img src="P2_S.png" alt="">
         <p class="subtitle">&#8226;&nbsp;BREADBOARD VIEW(S):</p>
@@ -249,13 +216,13 @@
         <p class="subtitle">&#8226;&nbsp;PHOTO(S) OF YOUR SETTING ON THE BREADBOARD:</p>
         <img src="P2_PHOTO.jpg" alt="">
         <P class="subtitle">&#8226;&nbsp;VIDEO:</P>
-        <iframe src="https://drive.google.com/file/d/1pPtYxkig5ik1d8rXse7ocwfkpNmVdPXk/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
+        <iframe src="https://drive.google.com/file/d/12GB4mf_T_88XPbhu3hbuwHWIi-fhj8zH/preview" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
         <p class="subtitle-src">&#8226;&nbsp;SOURCE CODE:</p>
-        <a class=link href="https://drive.google.com/file/d/1cmPaEHtZNP5VR0VgYLO_jAuPgLc7DUCz/preview">View</a>
-        <a class="link" href="https://drive.google.com/uc?export=download&id=1cmPaEHtZNP5VR0VgYLO_jAuPgLc7DUCz">Download</a>
+        <a class=link href="https://drive.google.com/file/d/1esuujKPp3eVJAGGHxRgSXI--G2ponjB0/preview">View</a>
+        <a class="link" href="https://drive.google.com/uc?export=download&id=1esuujKPp3eVJAGGHxRgSXI--G2ponjB0">Download</a>
         <br><br>
         <hr>
-        <p class="footer">11th October 2023</p>
+        <p class="footer">17th October 2023</p>
     </div>
 
 
