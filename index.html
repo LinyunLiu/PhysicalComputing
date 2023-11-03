@@ -7,27 +7,17 @@
     <link rel="stylesheet" href="style.css" id="link">
     <script src="script.js"></script>
     <style>
-        body {
-            background-color: #191919;
-            background-repeat: repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-        }
-        nav.topnav a:hover {
-            color: #ff8ad8;
-        }
-        nav.topnav a.active{
-            color: #ff8ad8;
-        }
         p{
-            color: white;
+            color: #ff7e79;
             font-family: 'Minecraft', serif;
             font-size: 42px;
             font-style: italic;
+            margin: 5px 0 0;
+
+
         }
-        div.main{
-            background-color: rgba(255, 138, 216, 0.1);
+        div.intro{
+            background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(5px);
             justify-content: center;
             align-items: center;
@@ -35,11 +25,13 @@
             margin-left: 150px;
             margin-right: 150px;
             border-radius: 5px 5px 5px 5px;
-            border: 1px solid rgb(255, 138, 216, 0.5);
+            border: 1px solid rgb(255, 255, 255, 0.3);
             display: flex;
             opacity: 0; /* Start with the div hidden */
             transform: scale(0.1); /* Start with the div at a small scale */
             animation: fadeInAndScale 1.5s ease-in-out forwards; /* Apply the animation */
+            padding: 20px;
+            min-width: 200px;
         }
         @keyframes fadeInAndScale {
             0% {
@@ -72,7 +64,7 @@
             <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
         </nav>
     </div>
-    <div class="main">
+    <div class="intro">
         <p>Physical Computing Lab</p>
     </div>
 </div>

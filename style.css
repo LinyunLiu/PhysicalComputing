@@ -9,6 +9,11 @@
 body{
     font-family: 'Avenir', sans-serif;
     font-size: 20px;
+    background-color: #191919;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 /* Add your regular styles for the top navigation bar */
 nav.topnav {
@@ -36,7 +41,7 @@ nav.topnav .icon {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -46,7 +51,7 @@ nav.topnav .icon {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
     .topnav.responsive {
         position: relative;
     }
@@ -60,5 +65,125 @@ nav.topnav .icon {
         display: block;
         text-align: left;
     }
+}
+nav.topnav a:hover {
+    color: #ff7e79;
+}
+nav.topnav a.active{
+    color: #ff7e79;
+}
+p{
+    color: white;
+}
+p.title-1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 40px;
+    margin: 80px 0 10px;
+    color: #ff7e79;
+    font-family: 'Retro' ,serif;
+    font-weight: bold;
+}
+p.title-2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 24px;
+    margin: 0 0 10px;
+    font-family: 'Retro' ,serif;
+    color: #ffae7f
+}
+p.title-3{
+    font-family: "Snell Roundhand",serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    margin: 0;
+}
+p.subtitle{
+    margin: 20px 0 5px 0;
+    color: #ffd479;
+    font-family: 'Retro', sans-serif;
+}
+p.subtitle-src{
+    margin: 20px 0 10px 0;
+    color: #ffae7f;
+    font-family: 'Retro', sans-serif;
+}
+p.assignment{
+    font-size: 24px;
+    margin: 0;
+    color: #ffae7f;
+    font-family: 'Retro', sans-serif;
+}
+p.assignment-description{
+    margin-top: 0;
+    font-size: 18px;
+}
+p.hardware{
+    margin: 0;
+    font-size: 18px;
+}
+img{
+    width: 100%;
+    min-width: 350px;
+    border-radius: 2px;
+    border: 2px solid #ffd479;
+    filter: grayscale(100%);
+    transition: all .5s ease-in-out;
+    opacity: 80%;
+}
+img:hover{
+    filter: grayscale(0);
+    transform: scale(1.01);
+    opacity: 100%;
+}
+div.main{
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 20px 100px 100px 100px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+iframe{
+    border-radius: 2px;
+    width: 100%;
+    min-width: 350px;
+    height: 600px;
+    border: 2px solid #ffd479;
+    filter: grayscale(100%);
+    transition: all .5s ease-in-out;
+    opacity: 80%;
+}
+iframe:hover{
+    filter: grayscale(0);
+    transform: scale(1.01);
+    opacity: 100%;
+}
+a.link{
+    color: white;
+    background-color: #ffd479;
+    border: 1px solid #ffd479;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 2px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Retro', sans-serif;
+}
+a.link:hover{
+    background-color: white;
+    border: 1px solid white;
+    color: #ffd479;
+}
+p.footer{
+    display: flex;
+    justify-content: right;
+    font-family: 'Retro', sans-serif;
+    font-size: 16px;
 }
 
