@@ -7,26 +7,40 @@
     <link rel="stylesheet" href="style.css" id="link">
     <script src="script.js"></script>
     <style>
-        p{
+        p.title{
             color: #ff7e79;
             font-family: 'Minecraft', serif;
             font-size: 42px;
             font-style: italic;
-            margin: 5px 0 0;
-
-
+            margin: 200px 0 0;
+            text-align: center;
+        }
+        p.description{
+            color: #ffffff;
+            font-family: 'Minecraft', serif;
+            font-size: 20px;
+            font-style: italic;
+            margin: 20px 0 0 0;
+            text-align: center;
+        }
+        p.footer{
+            color: #ffffff;
+            display: flex;
+            justify-content: right;
+            text-align: end;
+            font-family: 'Retro', sans-serif;
+            font-size: 10px;
+            margin: 400px 5px 0 0;
         }
         div.intro{
-            background-color: rgba(255, 255, 255, 0.0);
+            background-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
-            justify-content: center;
-            align-items: center;
-            margin-top: 300px;
-            margin-left: 150px;
-            margin-right: 150px;
+            margin-top: 8px;
+            margin-bottom: 0;
             border-radius: 5px 5px 5px 5px;
-            border: 1px solid rgb(255, 255, 255, 0.0);
+            border: 1px solid rgb(255, 255, 255, 0.3);
             display: flex;
+            flex-direction: column;
             opacity: 0; /* Start with the div hidden */
             transform: scale(0.1); /* Start with the div at a small scale */
             animation: fadeInAndScale 1.5s ease-in-out forwards; /* Apply the animation */
@@ -43,7 +57,6 @@
                 transform: scale(1);
             }
         }
-
     </style>
 </head>
 <body onload="removeSomeNav()">
@@ -57,7 +70,7 @@
             <a href="lab_four/lab-four.html">Lab IV</a>
             <a href="lab_five/lab-five.html">Lab V</a>
             <a href="lab_six/lab-six.html">Lab VI</a>
-            <a href="">Lab VII</a>
+            <a href="lab_seven/lab-seven.html">Lab VII</a>
             <a href="">Lab VIII</a>
             <a href="">Lab IX</a>
             <a href="">Lab X</a>
@@ -65,7 +78,9 @@
         </nav>
     </div>
     <div class="intro">
-        <p>Physical Computing Lab</p>
+        <p class="title">Physical Computing Lab 🍂</p>
+        <p class="description">This website will demonstrate some physical computing projects using ESP32</p>
+        <p class="footer">2023 LINYUN LIU</p>
     </div>
 </div>
 </body>
