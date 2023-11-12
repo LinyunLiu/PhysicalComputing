@@ -6,6 +6,9 @@
     font-family: 'Retro';
     src: url('fonts/Retro.ttf')
 }
+::selection {
+    background: #ffae7f80;
+}
 body{
     font-family: 'Avenir', sans-serif;
     font-size: 20px;
