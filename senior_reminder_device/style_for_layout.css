@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Minecraft';
-    src: url('fonts/Minecraft.ttf')
+    src: url('../fonts/Minecraft.ttf')
 }
 @font-face {
     font-family: 'Retro';
-    src: url('fonts/Retro.ttf')
+    src: url('../fonts/Retro.ttf')
 }
 ::selection {
     background: #f6e65e80;
@@ -91,6 +91,20 @@ nav.topnav a.active{
 p{
     color: white;
 }
+p.title{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #f6e65e;
+    font-family: 'Minecraft', serif;
+    font-size: 42px;
+    font-style: italic;
+    margin: 100px 0 80px 0;
+    text-align: center;
+}
+div.pdf{
+    margin: 20px 0 10px 0;
+}
 img{
     width: 100%;
     min-width: 350px;
@@ -126,10 +140,10 @@ p.footer{
     font-family: 'Retro', sans-serif;
     font-size: 16px;
 }
-
 hr{
     background-color: rgb(255,255,255,0.5);
     height: 1px;
-    border: none
+    border: none;
+    margin: 5px 0 5px 0;
 }
 
