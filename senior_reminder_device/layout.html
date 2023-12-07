@@ -6,6 +6,18 @@
     <title>Reminder Device</title>
     <link rel="stylesheet" href="style_for_layout.css" id="link">
     <script src="../script.js"></script>
+    <script>
+        function goToESPSourceCode(){
+            const url = "code.html"
+            window.open(url.replace(".html",""))
+        }
+        function goToGitHubSourceCode_Server(){
+            window.open("https://github.com/LinyunLiu/SeniorReminderDeviceServer")
+        }
+        function goToGitHubSourceCode_Interface(){
+            window.open("https://github.com/LinyunLiu/SeniorReminderDevice")
+        }
+    </script>
 </head>
 <body onload="removeSomeNav()">
 <div class="page">
@@ -36,7 +48,30 @@
                 <p>Your browser does not support PDFs.<a href="project_proposal.pdf">Download the PDF</a></p>
             </object>
         </div>
-
+        <br><br><br>
+        <div class="details">
+            <p class="subtitle">&#8226;&nbsp;CIRCUIT DIAGRAMS:</p>
+            <div class = images>
+                <img class="other" src="left_side_schema.png" alt="">
+                <img class="other" src="right_side_schema.png" alt="">
+            </div>
+            <p class="subtitle">&#8226;&nbsp;BREADBOARD VIEWS:</p>
+            <div class = images>
+                <img class="other" src="left_side_bb.png" alt="">
+                <img class="other" src="right_side_bb.png" alt="">
+            </div>
+            <p class="subtitle">&#8226;&nbsp;PHOTO:</p>
+            <img class="photo" src="photo.jpg" alt="">
+            <P class="subtitle">&#8226;&nbsp;VIDEO DEMO:</P>
+            <iframe src="https://www.youtube.com/embed/lh8mUN47sa4" width="640" height="360" allowfullscreen="allowfullscreen"></iframe>
+            <br><br><br>
+            <P class="subtitle">&#8226;&nbsp;SOURCE CODE:</P>
+            <div class="buttons">
+                <button class="code" onclick="goToESPSourceCode()">ESP32</button>
+                <button class="code" onclick="goToGitHubSourceCode_Server()">Web Server</button>
+                <button class="code" onclick="goToGitHubSourceCode_Interface()">Web Interface</button>
+            </div>
+        </div>
         <hr>
         <p class="footer">15th November 2023</p>
     </div>

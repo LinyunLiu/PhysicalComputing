@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Source Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('../fonts/Minecraft.ttf')
+        }
+        @font-face {
+            font-family: 'Retro';
+            src: url('../fonts/Retro.ttf')
+        }
+        ::selection {
+            background: #f6e65e80;
+        }
+        div.main{
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            padding: 20px 100px 100px 100px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+        /*Start From Here*/
+        p.title{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            color: black;
+            font-family: 'Minecraft', serif;
+            font-size: 42px;
+            font-style: italic;
+            margin: 100px 0 80px 0;
+            text-align: center;
+        }
+        p.subtitle{
+            margin: 20px 0 5px 0;
+            color: black;
+            font-family: 'Retro', sans-serif;
+        }
+        p.footer{
+            display: flex;
+            justify-content: right;
+            font-family: 'Retro', sans-serif;
+            font-size: 16px;
+        }
+        hr{
+            background-color: rgb(255,255,255,0.5);
+            height: 1px;
+            border: none;
+            margin: 15px 0 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <p class="title">Source Code for ESP32-1 & ESP32-2</p>
+        <p class="subtitle">&#8226;&nbsp;ESP32-1-Weather.py:</p>
+        <pre><code class="python">
+import time
+import dht
+import machine
+from machine import SoftI2C, Pin
+from I2C_LCD import I2cLcd
+
+i2c = SoftI2C(scl=Pin(22), sda=Pin(23), freq=400000)
+devices = i2c.scan()
+for device in devices:
+    lcd = I2cLcd(i2c, device, 2, 16)
+DHT = dht.DHT11(machine.Pin(5))
+button_red = Pin(2, Pin.IN, Pin.PULL_UP)
+button_green = Pin(0, Pin.IN, Pin.PULL_UP)
+button_yellow = Pin(4, Pin.IN, Pin.PULL_UP)
+
+import network
+import socket
+import time
+ssidRouter = "TWUGuest"
+passwordRouter = ''
+host = '10.18.7.90'
+port = 7070
+wlan=None
+s=None
+def connectWifi(ssid,passwd):
+  global wlan
+  wlan=network.WLAN(network.STA_IF)
+  wlan.active(True)
+  wlan.disconnect()
+  wlan.connect(ssid,passwd)
+  while(wlan.ifconfig()[0]=='0.0.0.0'):
+    time.sleep(1)
+  print("connected to wlan")
+  return True
+
+def setup():
+    try:
+        connectWifi(ssidRouter,passwordRouter)
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        s.connect((host,port))
+        print("TCP Connected to:", host, ":", port)
+        return s
+    except:
+        print("TCP close, please reset!")
+        if (s):
+            s.close()
+        wlan.disconnect()
+        wlan.active(False)
+
+# ==================== Buttons ==========================
+# When yellow button is click, display indoor weather
+def displayTmp():
+    DHT.measure()
+    for device in devices:
+        lcd = I2cLcd(i2c, device, 2, 16)
+    try:
+        DHT.measure()
+        lcd.move_to(0, 0)
+        lcd.putstr("Temperature: ")
+        lcd.move_to(0, 1)
+        lcd.putstr(str(DHT.humidity()))
+    except:
+        pass
+
+
+def displayHum():
+    DHT.measure()
+    for device in devices:
+        lcd = I2cLcd(i2c, device, 2, 16)
+    try:
+        DHT.measure()
+        lcd.move_to(0, 0)
+        lcd.putstr("Humidity: ")
+        lcd.move_to(0, 1)
+        lcd.putstr(str(DHT.temperature()))
+    except:
+        pass
+
+
+def displaySend(msg1, msg2):
+    DHT.measure()
+    for device in devices:
+        lcd = I2cLcd(i2c, device, 2, 16)
+    try:
+        DHT.measure()
+        lcd.move_to(0, 0)
+        lcd.putstr(msg1)
+        lcd.move_to(0, 1)
+        lcd.putstr(msg2)
+    except:
+        pass
+
+isSetup = False
+SOKECT = None
+while True:
+    if not button_yellow.value():
+        displayTmp()
+    if not button_green.value():
+        displayHum()
+    if not button_red.value():
+
+        if isSetup == False:
+            displaySend("Sending Email...","Please Wait")
+            SOCKET = setup()
+            SOCKET.send('Send Email')
+            displaySend("Email Sent!","")
+            isSetup = True
+        else:
+            displaySend("Sending Email...","Please Wait")
+            SOCKET.send('Send Email')
+            displaySend("Email Sent!","")
+        </code></pre>
+        <p class="subtitle">&#8226;&nbsp;ESP32-2-Reminder.py:</p>
+        <pre><code class="python">
+import time
+import machine
+from machine import Pin
+from myservo import myServo
+from machine import SoftI2C, Pin
+from I2C_LCD import I2cLcd
+import _thread
+
+led_north=Pin(2,Pin.OUT)
+led_south=Pin(15, Pin.OUT)
+led_west=Pin(4, Pin.OUT)
+led_east=Pin(0, Pin.OUT)
+
+led_north.value(0)
+led_west.value(0)
+led_south.value(0)
+led_east.value(0)
+
+servo=myServo(21)#set servo pin
+servo.myServoWriteAngle(0)#Set Servo Angle
+time.sleep_ms(1000)
+
+i2c = SoftI2C(scl=Pin(22), sda=Pin(23), freq=400000)
+devices = i2c.scan()
+for device in devices:
+    lcd = I2cLcd(i2c, device, 2, 16)
+
+
+def servo_to_pill():
+    servo.myServoWriteAngle(0)
+    time.sleep_ms(4)
+
+def servo_to_task():
+    servo.myServoWriteAngle(110)
+    time.sleep_ms(4)
+
+def servo_to_other():
+    servo.myServoWriteAngle(180)
+    time.sleep_ms(4)
+
+
+def display(msg1, msg2):
+    for device in devices:
+        lcd = I2cLcd(i2c, device, 2, 16)
+    try:
+        lcd.move_to(0, 0)
+        lcd.putstr(msg1)
+        lcd.move_to(0, 1)
+        lcd.putstr(msg2)
+    except:
+        pass
+
+
+# =========== Connect to WiFi and listen for TCP connection ===========
+import network
+import socket
+import time
+ssidRouter     =  "TWUGuest"
+passwordRouter =  ""
+port           =   8000
+wlan=None
+listenSocket=None
+
+# TODO
+def STA_Setup(ssidRouter,passwordRouter):
+    sta_if = network.WLAN(network.STA_IF)
+    if not sta_if.isconnected():
+        print('connecting to',ssidRouter)
+        sta_if.active(True)
+        sta_if.connect(ssidRouter,passwordRouter)
+        while not sta_if.isconnected():
+            pass
+    print('IP address:', sta_if.ifconfig())
+
+try:
+    STA_Setup(ssidRouter,passwordRouter)
+except:
+    sta_if.disconnect()
+
+def process_data(msg):
+    tmp = msg.split(",")
+    if tmp[0] == "Pill":
+        servo_to_pill()
+        led_north.value(1)
+        led_west.value(0)
+        led_south.value(0)
+        display("Pill To Take:", str(tmp[1]))
+    if tmp[0] == "Task":
+        servo_to_task()
+        led_north.value(0)
+        led_west.value(1)
+        led_south.value(0)
+        display("You need to:", str(tmp[1]))
+    if tmp[0] == "Other":
+        servo_to_other()
+        led_north.value(0)
+        led_west.value(0)
+        led_south.value(1)
+        display("Other:", str(tmp[1]))
+
+def connectWifi(ssid,passwd):
+  global wlan
+  wlan=network.WLAN(network.STA_IF)
+  wlan.active(True)
+  wlan.disconnect()
+  wlan.connect(ssid,passwd)
+  while(wlan.ifconfig()[0]=='0.0.0.0'):
+    time.sleep(1)
+  return True
+
+#TODO
+try:
+  connectWifi(ssidRouter,passwordRouter)
+  ip=wlan.ifconfig()[0]
+  listenSocket = socket.socket()
+  listenSocket.bind((ip,port))
+  listenSocket.listen(1)
+  listenSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+  while True:
+    print("Listening to server...")
+    display("Listening to","server")
+    led_east.value(1)
+    conn,addr = listenSocket.accept()
+    break
+  while True:
+    try:
+        data = conn.recv(1024)
+        if(len(data) == 0):
+          display("Connection","lost")
+          led_east.value(0)
+          print("close socket")
+          listenSocket.close()
+          wlan.disconnect()
+          wlan.active(False)
+          break
+        else:
+          print(data)
+          process_data(str(data).replace("b","").replace("'",""))
+    except:
+        pass
+
+except:
+  display("Connection","lost")
+  led_east.value(0)
+  print("Close TCP-Server, please reset.")
+  if(listenSocket):
+    listenSocket.close()
+  wlan.disconnect()
+  wlan.active(False)
+        </code></pre>
+    </div>
+    <hr>
+    <p class="footer">15th November 2023</p>
+</body>
+</html>

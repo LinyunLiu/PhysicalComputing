@@ -43,6 +43,8 @@ div.main{
     margin-top: 8px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
 }
 nav.topnav a {
     float: left;
@@ -91,6 +93,8 @@ nav.topnav a.active{
 p{
     color: white;
 }
+
+/*Start From Here*/
 p.title{
     align-items: center;
     justify-content: center;
@@ -105,11 +109,30 @@ p.title{
 div.pdf{
     margin: 20px 0 10px 0;
 }
-img{
+p.subtitle{
+    margin: 20px 0 5px 0;
+    color: #f6e65e;
+    font-family: 'Retro', sans-serif;
+}
+div.images{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    margin: 0
+}
+img.photo{
     width: 100%;
     min-width: 350px;
-    border-radius: 2px;
-    border: 2px solid #ffd479;
+    margin: 0;
+}
+img.other{
+    width: 1000px;
+    height: 500px;
+}
+img{
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px solid #f6e65e;
     filter: grayscale(100%);
     transition: all .5s ease-in-out;
     opacity: 80%;
@@ -120,11 +143,11 @@ img:hover{
     opacity: 100%;
 }
 iframe{
-    border-radius: 2px;
+    border-radius: 8px;
     width: 100%;
     min-width: 350px;
     height: 600px;
-    border: 2px solid #ffd479;
+    border: 2px solid #f6e65e;
     filter: grayscale(100%);
     transition: all .5s ease-in-out;
     opacity: 80%;
@@ -144,6 +167,35 @@ hr{
     background-color: rgb(255,255,255,0.5);
     height: 1px;
     border: none;
-    margin: 5px 0 5px 0;
+    margin: 15px 0 5px 0;
+}
+div.buttons{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    flex-wrap: wrap;
+}
+button.code{
+    width: 30%;
+    height: 50px;
+    min-width: 340px;
+}
+button{
+    width: 100%;
+    height: 50px;
+    min-width: 350px;
+    border-radius: 16px;
+    border: 1px solid #f6e65e;
+    background-color: #f6e65e;
+    margin: 10px;
+    font-family: 'Retro', sans-serif;
+    color: black;
+    font-size: 18px;
+    transition: background 0.2s ease-in-out;
+}
+button:hover{
+    background-color: rgb(0, 0, 0, 0.2);
+    color: #f6e65e;
+    cursor: pointer;
 }
 
