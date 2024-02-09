@@ -10,7 +10,8 @@
     background: #ffae7f80;
 }
 body{
-    font-family: 'Avenir', sans-serif;
+    /*font-family: 'Avenir', sans-serif;*/
+    font-family: Futura, "futura-pt", sans-serif;
     font-size: 20px;
     background-color: black;
     background-repeat: repeat;
@@ -26,12 +27,12 @@ div.page{
 }
 div.topnav{
     position: relative;
-    font-family: 'Minecraft', serif;
+    /*font-family: 'Retro', sans-serif;*/
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.0);
     padding: 5px 80px 0 80px;
     margin-top: 8px;
 }
@@ -42,7 +43,7 @@ div.main{
     padding: 20px 100px 100px 100px;
     margin-top: 8px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.0);
 }
 nav.topnav a {
     float: left;
@@ -99,7 +100,7 @@ p.title-1{
     font-size: 40px;
     margin: 80px 0 10px;
     color: #ff7e79;
-    font-family: 'Retro' ,serif;
+    /*font-family: 'Retro', sans-serif;*/
     font-weight: bold;
 }
 p.title-2{
@@ -108,7 +109,7 @@ p.title-2{
     display: flex;
     font-size: 24px;
     margin: 0 0 10px;
-    font-family: 'Retro' ,serif;
+    /*font-family: 'Retro', sans-serif;*/
     color: #ffae7f
 }
 p.title-3{
@@ -122,18 +123,18 @@ p.title-3{
 p.subtitle{
     margin: 20px 0 5px 0;
     color: #ffd479;
-    font-family: 'Retro', sans-serif;
+    /*font-family: 'Retro', sans-serif;*/
 }
 p.subtitle-src{
     margin: 20px 0 10px 0;
     color: #ffae7f;
-    font-family: 'Retro', sans-serif;
+    /*font-family: 'Retro', sans-serif;*/
 }
 p.assignment{
     font-size: 24px;
     margin: 0;
     color: #ffae7f;
-    font-family: 'Retro', sans-serif;
+    /*font-family: 'Retro', sans-serif;*/
 }
 p.assignment-description{
     margin-top: 0;
@@ -181,7 +182,7 @@ a.link{
     padding: 2px;
     text-decoration: none;
     font-size: 16px;
-    font-family: 'Retro', sans-serif;
+    /*font-family: 'Retro', sans-serif;*/
 }
 a.link:hover{
     background-color: white;
@@ -191,7 +192,7 @@ a.link:hover{
 p.footer{
     display: flex;
     justify-content: right;
-    font-family: 'Retro', sans-serif;
+    /*font-family: 'Retro', sans-serif;*/
     font-size: 16px;
 }
 

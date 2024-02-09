@@ -10,7 +10,8 @@
     background: #f6e65e80;
 }
 body{
-    font-family: 'Avenir', sans-serif;
+    /*font-family: 'Avenir', sans-serif;*/
+    font-family: Futura, "futura-pt", sans-serif;
     font-size: 20px;
     background-color: black;
     background-repeat: repeat;
@@ -26,7 +27,7 @@ div.page{
 }
 div.topnav{
     position: relative;
-    font-family: 'Minecraft', serif;
+    /*font-family: 'Minecraft', serif;*/
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
@@ -100,7 +101,7 @@ p.title{
     justify-content: center;
     display: flex;
     color: #f6e65e;
-    font-family: 'Minecraft', serif;
+    /*font-family: 'Minecraft', serif;*/
     font-size: 42px;
     font-style: italic;
     margin: 100px 0 80px 0;
@@ -112,7 +113,7 @@ div.pdf{
 p.subtitle{
     margin: 20px 0 5px 0;
     color: #f6e65e;
-    font-family: 'Retro', sans-serif;
+    /*font-family: 'Retro', sans-serif;*/
 }
 div.images{
     display: flex;
@@ -160,7 +161,7 @@ iframe:hover{
 p.footer{
     display: flex;
     justify-content: right;
-    font-family: 'Retro', sans-serif;
+    /*font-family: 'Retro', sans-serif;*/
     font-size: 16px;
 }
 hr{
@@ -188,7 +189,7 @@ button{
     border: 1px solid #f6e65e;
     background-color: #f6e65e;
     margin: 10px;
-    font-family: 'Retro', sans-serif;
+    /*font-family: 'Retro', sans-serif;*/
     color: black;
     font-size: 18px;
     transition: background 0.2s ease-in-out;
